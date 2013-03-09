@@ -13,7 +13,6 @@
     <artifactId>short-straw-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Undobar</name>
 
     <modules>
         <module>app</module>
