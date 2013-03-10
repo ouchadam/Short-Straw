@@ -12,7 +12,6 @@ public class StrawDistributorActivity extends Activity implements UiUpdater {
 
     private final StrawListGenerator strawListGenerator;
 
-    private int strawTotal = 1;
     private List<Straw> strawList;
     private TextView remainingStraws;
 
@@ -23,11 +22,16 @@ public class StrawDistributorActivity extends Activity implements UiUpdater {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_straw_distributor);
         findViews();
+        int strawTotal = getStrawTotal(getIntent());
         strawList = initStraws(strawTotal);
         updateStrawsLeft(strawTotal);
         initNfc(strawList);
+    }
+
+    private int getStrawTotal(Intent intent) {
+        return intent.getIntExtra(StrawSetupActivity.EXTRA_STRAW_TOTAL, 1);
     }
 
     private void findViews() {
