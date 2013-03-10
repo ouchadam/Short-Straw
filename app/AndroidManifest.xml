@@ -24,7 +24,8 @@
       </intent-filter>
     </activity>
 
-    <activity android:name=".StrawDistributorActivity"/>
+    <activity android:name=".StrawDistributorActivity"
+      android:screenOrientation="portrait"/>
 
     <activity android:name=".StrawClientActivity">
       <intent-filter>
