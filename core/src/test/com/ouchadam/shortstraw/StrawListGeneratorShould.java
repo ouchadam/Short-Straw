@@ -21,11 +21,9 @@ public class StrawListGeneratorShould {
     @Test
     public void always_pick_a_short_straw_when_there_is_only_one_straw() throws Exception {
         int strawTotal = 1;
-        for (int i = 0; i < GENERATE_RETRY_AMOUNT; i++) {
-            List<Straw> straws = strawListGenerator.generate(strawTotal);
+        List<Straw> straws = strawListGenerator.generate(strawTotal);
 
-            assertThat(straws).contains(shortStraw);
-        }
+        assertThat(straws).contains(shortStraw);
     }
 
     @Test

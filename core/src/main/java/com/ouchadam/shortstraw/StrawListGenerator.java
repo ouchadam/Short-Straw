@@ -9,8 +9,14 @@ public class StrawListGenerator {
     private static final int EDGE_CASE_SINGLE_STRAW = 1;
 
     private final List<Straw> straws;
+    private final RandomNumberPicker randomNumberPicker;
 
     public StrawListGenerator() {
+        this(new RandomNumberPicker());
+    }
+
+    public StrawListGenerator(RandomNumberPicker randomNumberPicker) {
+        this.randomNumberPicker = randomNumberPicker;
         straws = new ArrayList<Straw>();
     }
 
@@ -39,16 +45,16 @@ public class StrawListGenerator {
         return straws;
     }
 
+    private int getShortStraw(int strawTotal) {
+        return randomNumberPicker.getRandomNumber(strawTotal);
+    }
+
     private void addShortStraw() {
         straws.add(new Straw(true));
     }
 
     private boolean isEdgeCase(int strawTotal) {
         return strawTotal == EDGE_CASE_SINGLE_STRAW;
-    }
-
-    private int getShortStraw(int strawTotal) {
-        return (int) (Math.random() * (strawTotal + 1));
     }
 
 }
