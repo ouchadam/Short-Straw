@@ -9,10 +9,10 @@ import static android.nfc.NdefRecord.createMime;
 
 public class NfcHandler implements NfcWrapper.onNfcPushListener {
 
-    private final List<StrawGenerator.Straw> strawList;
+    private final List<Straw> strawList;
     private final UiUpdater uiUpdater;
 
-    public NfcHandler(List<StrawGenerator.Straw> strawList, UiUpdater uiUpdater) {
+    public NfcHandler(List<Straw> strawList, UiUpdater uiUpdater) {
         this.strawList = strawList;
         this.uiUpdater = uiUpdater;
     }

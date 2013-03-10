@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 public class StrawClientActivity extends Activity implements View.OnClickListener {
 
-    public static final String ACTION_LAST_STRAW = "last_straw";
+    public static final String ACTION_LAST_STRAW = StrawClientActivity.class.getSimpleName() + "last_straw";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -10,9 +10,15 @@ import java.util.List;
 
 public class StrawDistributorActivity extends Activity implements UiUpdater {
 
-    private int strawTotal = 4;
-    private List<StrawGenerator.Straw> strawList;
+    private final StrawListGenerator strawListGenerator;
+
+    private int strawTotal = 1;
+    private List<Straw> strawList;
     private TextView remainingStraws;
+
+    public StrawDistributorActivity() {
+        strawListGenerator = new StrawListGenerator();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -20,6 +26,7 @@ public class StrawDistributorActivity extends Activity implements UiUpdater {
         setContentView(R.layout.main);
         findViews();
         strawList = initStraws(strawTotal);
+        updateStrawsLeft(strawTotal);
         initNfc(strawList);
     }
 
@@ -27,13 +34,11 @@ public class StrawDistributorActivity extends Activity implements UiUpdater {
         remainingStraws = (TextView) findViewById(R.id.straws_left);
     }
 
-    private List<StrawGenerator.Straw> initStraws(int strawTotal) {
-        List<StrawGenerator.Straw> strawList = StrawGenerator.generate(strawTotal);
-        updateStrawsLeft(strawTotal);
-        return strawList;
+    private List<Straw> initStraws(int strawTotal) {
+        return strawListGenerator.generate(strawTotal);
     }
 
-    private void initNfc(List<StrawGenerator.Straw> strawList) {
+    private void initNfc(List<Straw> strawList) {
         NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         NfcWrapper nfcWrapper = new NfcWrapper(nfcAdapter, new NfcHandler(strawList, this), this);
     }
@@ -63,6 +68,7 @@ public class StrawDistributorActivity extends Activity implements UiUpdater {
     private void showLastStraw() {
         Intent intent = createLastStrawIntent();
         startActivity(intent);
+        finish();
     }
 
     private Intent createLastStrawIntent() {
