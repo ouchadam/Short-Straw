@@ -26,8 +26,8 @@ public class StrawGenerator {
             this.isShort = isShort;
         }
 
-        public boolean isShort() {
-            return isShort;
+        public String isShort() {
+            return isShort ? "short" : "not short";
         }
 
     }

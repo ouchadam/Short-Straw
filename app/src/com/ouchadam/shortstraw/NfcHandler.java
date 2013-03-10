@@ -42,7 +42,7 @@ public class NfcHandler implements NfcWrapper.onNfcPushListener {
     }
 
     private String getStraw() {
-        String isShort = strawList.get(strawList.size() - 1).isShort() ? "short" : "not short";
+        String isShort = strawList.get(strawList.size() - 1).isShort();
         String text = "Straw " + strawList.size() + " is " + isShort;
         return text;
     }

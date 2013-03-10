@@ -36,11 +36,11 @@ public class NfcWrapper {
         }
     };
 
-    public boolean isNfcAction(String action) {
+    public static boolean isNfcAction(String action) {
         return NfcAdapter.ACTION_NDEF_DISCOVERED.equals(action);
     }
 
-    public String getPayload(Intent intent) {
+    public static String getPayload(Intent intent) {
         Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
         NdefMessage msg = (NdefMessage) rawMsgs[0];
         return new String(msg.getRecords()[0].getPayload());
