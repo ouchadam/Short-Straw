@@ -1,7 +1,10 @@
-package com.ouchadam.shortstraw;
+package com.ouchadam.shortstraw.nfc;
 
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
+
+import com.ouchadam.shortstraw.Straw;
+import com.ouchadam.shortstraw.UiUpdater;
 
 import java.util.List;
 

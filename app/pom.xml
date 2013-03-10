@@ -4,8 +4,8 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.ouchadam.undobar</groupId>
-    <artifactId>undobar-parent</artifactId>
+    <groupId>com.ouchadam.short-straw</groupId>
+    <artifactId>short-straw-parent</artifactId>
     <version>0.1-SNAPSHOT</version>
   </parent>
 

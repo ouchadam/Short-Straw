@@ -1,9 +1,12 @@
-package com.ouchadam.shortstraw;
+package com.ouchadam.shortstraw.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.ouchadam.shortstraw.nfc.NfcWrapper;
+import com.ouchadam.shortstraw.R;
 
 public class StrawClientActivity extends Activity implements View.OnClickListener {
 
@@ -42,7 +45,7 @@ public class StrawClientActivity extends Activity implements View.OnClickListene
 
     private void handleLastStrawAction() {
         String message = getIntent().getStringExtra(ACTION_LAST_STRAW);
-        setStrawMessage("Straw 0 is " + message);
+        setStrawMessage("Straw 1 is " + message);
     }
 
     private void setStrawMessage(String message) {

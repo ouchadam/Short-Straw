@@ -1,4 +1,4 @@
-package com.ouchadam.shortstraw;
+package com.ouchadam.shortstraw.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.NumberPicker;
+
+import com.ouchadam.shortstraw.R;
 
 public class StrawSetupActivity extends Activity implements View.OnClickListener {
 

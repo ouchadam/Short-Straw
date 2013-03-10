@@ -1,4 +1,4 @@
-package com.ouchadam.shortstraw;
+package com.ouchadam.shortstraw.nfc;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,10 +1,14 @@
-package com.ouchadam.shortstraw;
+package com.ouchadam.shortstraw.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.ouchadam.shortstraw.*;
+import com.ouchadam.shortstraw.nfc.NfcHandler;
+import com.ouchadam.shortstraw.nfc.NfcWrapper;
 
 import java.util.List;
 

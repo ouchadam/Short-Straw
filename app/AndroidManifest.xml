@@ -17,17 +17,17 @@
     android:label="@string/app_name"
     android:theme="@android:style/Theme.Holo.Light">
 
-    <activity android:name=".StrawSetupActivity">
+    <activity android:name=".activity.StrawSetupActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
 
-    <activity android:name=".StrawDistributorActivity"
+    <activity android:name=".activity.StrawDistributorActivity"
       android:screenOrientation="portrait"/>
 
-    <activity android:name=".StrawClientActivity">
+    <activity android:name=".activity.StrawClientActivity">
       <intent-filter>
         <action android:name="android.nfc.action.NDEF_DISCOVERED" />
         <category android:name="android.intent.category.DEFAULT" />

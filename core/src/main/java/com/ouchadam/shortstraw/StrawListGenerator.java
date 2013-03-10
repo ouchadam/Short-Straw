@@ -28,6 +28,10 @@ public class StrawListGenerator {
         }
     }
 
+    private boolean isEdgeCase(int strawTotal) {
+        return strawTotal == EDGE_CASE_SINGLE_STRAW;
+    }
+
     private List<Straw> createSingleStraw() {
         addShortStraw();
         return straws;
@@ -51,10 +55,6 @@ public class StrawListGenerator {
 
     private void addShortStraw() {
         straws.add(new Straw(true));
-    }
-
-    private boolean isEdgeCase(int strawTotal) {
-        return strawTotal == EDGE_CASE_SINGLE_STRAW;
     }
 
 }
